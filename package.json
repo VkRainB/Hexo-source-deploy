@@ -1,0 +1,50 @@
+{
+  "name": "hexo-source-deploy",
+  "version": "1.0.0",
+  "description": "Git source upload plugin of Hexo.",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint .",
+    "test": "mocha test/index.js",
+    "test-cov": "c8 --reporter=lcovonly npm run test"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "lib/",
+    "index.js"
+  ],
+  "repository": "https://github.com/VkRainB/Hexo-source-deploy",
+  "homepage": "https://github.com/VkRainB/Hexo-source-deploy",
+  "keywords": [
+    "hexo",
+    "git",
+    "deploy",
+    "deployer"
+  ],
+  "author": "VkRainB <a13531133012@163.com>",
+  "maintainers": [
+    "VkRainB <a13531133012@163.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "c8": "^10.1.2",
+    "chai": "^4.3.7",
+    "eslint": "^8.33.0",
+    "eslint-config-hexo": "^5.0.0",
+    "mocha": "^10.2.0",
+    "sinon": "^18.0.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "hexo-fs": "^4.1.1",
+    "hexo-util": "^3.0.1",
+    "luxon": "^3.2.1",
+    "nunjucks": "^3.2.3",
+    "picocolors": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
