@@ -8,11 +8,17 @@ hexo-deployer-git进行如下配置也能达到上传源码的目的：
     - type: git
       repo: git@github.com:<username>/<username>.github.io.git
       branch: src
+      deploy:
       extend_dirs: /  # 指定要推送的目录（根目录）
       ignore_hidden: false #决定是否忽略隐藏文件（以 . 开头的文件）
-      ignore_pattern:
-          public: .  # 忽略 public 目录下的所有文件
+      ignore_pattern: '^(public|.git|.deploy_git|node_modules)(/.*)?$' # 忽略的文件或目录
   ```
+但是这会导致你提交的记录总是如下：
+ 
+Site updated: 2024-10-15 15:04:30
+Site updated: 2024-10-20 15:04:20
+
+而且push使用的--force参数，会覆盖推送
 
 # hexo-source-deploy
 
